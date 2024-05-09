@@ -49,9 +49,9 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           cache-from: |
-            type=registry,ref=${{ vars.DOCKERHUB_USERNAME }}/labtest:zadanie1
+            type=registry,ref=${{ vars.DOCKERHUB_USERNAME }}/labtest
           cache-to: |
             type=inline 
-          tags: zadanie1
+          tags: d4sk/labtest:zadanie1
 
       
