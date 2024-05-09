@@ -1,3 +1,5 @@
-Budowanie 
+Budowanie obrazu za pomocą github actions
 
-`docker buildx build --platform linux/amd64,linux/arm64 --cache-to type=inline --cache-from type=registry,ref=d4sk/labtest:zadanie1 --sbom=true --provenance=true --tag d4sk/labtest:zadanie1 --push .`
+[plik akcji](.github\workflows\action.yml)
+
+![actions](/imgs/image4.png)

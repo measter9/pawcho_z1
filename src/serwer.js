@@ -6,7 +6,8 @@ var http = require('http')
 
 
 app.get('/',(req,res) =>{
-    var ipAddress
+    //obsługa strony domyślnej wyświetla adres it klienta i godzine w jego strefie czasowej
+    //ip jest pobierane z zewnętrzengo api aby zawsze uzyskać zewnętrzne ip na localhost
     http.get({'host': 'api.ipify.org', 'port': 80, 'path': '/'}, function(resp) {
         resp.on('data', function(ip) {
             console.log("połączenie: " + ip);
@@ -18,7 +19,7 @@ app.get('/',(req,res) =>{
 
    
 })
-
+    //logowanie włączenia serwera
 app.listen(port,()=>{
     const date = new Date(Date.now()) 
     console.log("["+date.toLocaleString() +"] Autor: Dawid Skubij "+"  PORT: "+port)
