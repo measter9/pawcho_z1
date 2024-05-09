@@ -52,4 +52,6 @@ jobs:
             type=registry,ref=${{ vars.DOCKERHUB_USERNAME }}/labtest:zadanie1
           cache-to: |
             type=inline 
+          tags: ${{ steps.meta.outputs.tags }}
+
       
